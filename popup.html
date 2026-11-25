@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <h1>Expense Quick Note</h1>
+
+  <form id="add-form">
+    <input id="amount" type="number" min="0" step="0.01" placeholder="Amount" required>
+    <input id="note" type="text" maxlength="80" placeholder="What was it for?" required>
+    <button type="submit" id="add-btn">Add</button>
+  </form>
+
+  <div class="totals">
+    <div>Today: <strong id="today-total">0.00</strong></div>
+    <div>This month: <strong id="month-total">0.00</strong></div>
+  </div>
+
+  <h2>Today</h2>
+  <ul id="today-list"></ul>
+  <p id="empty-msg">No expenses yet today.</p>
+
+  <div class="actions">
+    <button id="export-btn" type="button">Export CSV (this month)</button>
+    <button id="clear-btn" type="button">Clear all</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
